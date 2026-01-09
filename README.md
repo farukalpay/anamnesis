@@ -23,11 +23,11 @@
 Standard manifold learning assumes a canonical topology exists. We treat the transition from Manifold to Graph as a parameterized family of functors $U_k: \mathbf{RiemMan} \to \mathbf{Graph}_k$. The "missing information" in this forgetful process is the **local scale** ($k$). Without estimating this scale, the geometry is ill-posed.
 
 ### 2. Geometric Identifiability (Formal)
-We define the **Geometric Identifiability** of an embedding space as its invariance under scale perturbations. Formally, for a family of resulting manifolds $\mathcal{M}_k$ derived from neighborhood scales $k$, the **Scale Non-Identifiability** (Instability) $\mathcal{L}_{geom}$ is the accumulated Procrustes disparity:
+We define the **Geometric Identifiability** of an embedding space as its invariance under scale perturbations. Formally, for a family of resulting manifolds $\mathcal{M}_k$ derived from neighborhood scales $k$, the **Scale Non-Identifiability** (Instability) $\mathcal{L}_{\text{geom}}$ is the accumulated Procrustes disparity:
 
-$$ \mathcal{L}_{geom}(k_{min}, k_{max}) = \int_{k_{min}}^{k_{max}} \text{Procrustes}(\mathcal{M}_k, \mathcal{M}_{k+\delta}) \, dk $$
+$$ \mathcal{L}_{\text{geom}}(k_{min}, k_{max}) = \int_{k_{min}}^{k_{max}} \text{Procrustes}(\mathcal{M}_k, \mathcal{M}_{k+\delta}) \, dk $$
 
-A high $\mathcal{L}_{geom}$ implies a "Rashomon Effect" — multiple plausible but contradictory geometries exist depending on the observer's choice of $k$.
+A high $\mathcal{L}_{\text{geom}}$ implies a "Rashomon Effect" — multiple plausible but contradictory geometries exist depending on the observer's choice of $k$.
 
 > **Note**: We use the term "Rashomon Effect" to refer to the multiplicity of geometric truths, distinct from Breiman's "Rashomon Set" in predictive modeling (model multiplicity with equal accuracy). Here, it refers to geometric multiplicity with equal validity.
 
@@ -181,7 +181,7 @@ We ground our diagnostics in the following theoretical works:
 2.  **Breiman, L. (2001). Statistical modeling: The two cultures. *Statistical science*.**
     *   Breiman coined the "Rashomon Effect" to describe the multiplicity of predictive models with equal accuracy. We adapt this concept to the "Geometric Rashomon Effect"—the multiplicity of manifold reconstructions that are equally valid under different observation scales.
 3.  **Kendall, D. G. (1984). Shape manifolds, procrustean metrics, and complex projective spaces. *Bulletin of the London Mathematical Society*.**
-    *   Kendall's work provides the mathematical basis for **Procrustes Analysis**, which serves as our primary metric $\mathcal{L}_{geom}$ for quantifying the misalignment between competing geometries ($M_k$ vs $M_{k+\delta}$).
+    *   Kendall's work provides the mathematical basis for **Procrustes Analysis**, which serves as our primary metric $\mathcal{L}_{\text{geom}}$ for quantifying the misalignment between competing geometries ($M_k$ vs $M_{k+\delta}$).
 4.  **Coifman, R. R., & Lafon, S. (2006). Diffusion maps. *Applied and computational harmonic analysis*.**
     *   This introduces the concept of **local scale** ($\sigma_i$) and adaptive kernels. We implement these principles in our "Adaptive Isomap" to resolve scale non-identifiability by dynamically sizing neighborhoods based on local density.
 5.  **Kusupati, A., et al. (2024). Matryoshka Representation Learning. *NeurIPS*.**
