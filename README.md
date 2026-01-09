@@ -106,6 +106,8 @@ graph TD
     A --> H[Cargo.lock]
     A --> I[build.rs]
     A --> J[pyproject.toml]
+    A --> K[phase_diagram.png]
+    A --> L[scale_stability_curve.png]
     
     B --> B1[lib.rs]
     B1 -->|Rust Kernel| K[Parallel Dijkstra + BLAS]
@@ -136,6 +138,8 @@ graph TD
 | `pyproject.toml` | **Python Config**. Configures `maturin` as the build backend for the Python-Rust extension. |
 | `benchmarks.csv` | **Performance Log**. Auto-generated log of kernel speedup measurements vs Scikit-learn. |
 | `geometric_ablation_results.csv` | **Research Data**. Raw data from the Phase Diagram sweep (Dimension x Instruction). |
+| `phase_diagram.png` | **Key Result**. Visualization of geometric stability across dimensions and instructions. |
+| `scale_stability_curve.png` | **Diagnosis**. Plot showing stability variance across neighborhood scales ($k$). |
 | `requirements.txt` | **Python Config**. Standard requirements file for reproducible environments. |
 | `README.md` | **Documentation**. This file. Project overview, theory, and usage guide. |
 | `LICENSE` | **License**. MIT License text. |
