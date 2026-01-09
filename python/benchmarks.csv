@@ -1,0 +1,6 @@
+Timestamp,Samples,Dimensions,Method,Disparity,Success
+2026-01-09 19:56:59,1000,3,Isomap,0.631812,False
+2026-01-09 19:57:37,1000,3,Isomap,0.001171,True
+2026-01-09 20:33:14,1000,3,Isomap,0.000677,True
+2026-01-09 20:35:15,1000,3,Isomap,0.000767,True
+2026-01-09 20:37:20,1000,3,Isomap,0.001402,True

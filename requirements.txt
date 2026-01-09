@@ -1,0 +1,11 @@
+numpy
+torch
+transformers
+accelerate
+scipy
+matplotlib
+scikit-learn
+seaborn
+pillow
+huggingface_hub
+maturin

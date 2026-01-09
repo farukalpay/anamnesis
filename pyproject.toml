@@ -1,0 +1,25 @@
+[build-system]
+requires = ["maturin>=1.0,<2.0"]
+build-backend = "maturin"
+
+[project]
+name = "anamnesis"
+version = "0.1.0"
+description = "Empirical falsification instrument for the Asymmetric Derivability Thesis"
+dependencies = [
+    "numpy",
+    "torch",
+    "transformers",
+    "accelerate",
+    "scipy",
+    "matplotlib",
+    "scikit-learn",
+    "pillow",
+    "seaborn",
+    "huggingface_hub"
+]
+requires-python = ">=3.9"
+
+[tool.maturin]
+features = ["pyo3/extension-module"]
+module-name = "anamnesis.categorical_kernel"

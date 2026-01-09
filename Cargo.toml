@@ -1,0 +1,20 @@
+[package]
+name = "anamnesis"
+version = "0.1.0"
+edition = "2021"
+
+[lib]
+name = "categorical_kernel"
+crate-type = ["cdylib"]
+
+[dependencies]
+pyo3 = { version = "0.22", features = ["extension-module", "auto-initialize"] }
+numpy = "0.22"
+# Enable rayon feature for parallel iterators in ndarray
+ndarray = { version = "0.15", features = ["rayon"] }
+rayon = "1.10"
+rand = "0.8"
+
+[build-dependencies]
+bindgen = "0.69" 
+cc = "1.0"

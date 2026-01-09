@@ -1,0 +1,4 @@
+Timestamp,Samples,Dimensions,Disparity,Hypothesis_Supported
+2026-01-09 19:33:38,1000,3,0.998505,True
+2026-01-09 19:41:13,1000,3,0.998703,True
+2026-01-09 19:49:59,1000,3,0.000000,False
